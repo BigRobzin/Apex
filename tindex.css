@@ -1,47 +1,219 @@
-/* General styles for all devices */
+/* General Styles */
 html, body {
-    height: 100%; 
+    height: 100%;
     margin: 0;
-    font-family: 'Poppins', Arial, sans-serif; 
+    font-family: 'Poppins', Arial, sans-serif;
     line-height: 1.6;
-    background-image: url('52833.jpg'); 
-    background-size: cover; 
+    background-image: url('52833.jpg'); /* Use the beautiful background image */
+    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Styles for the main container */
-.container, .container2 {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    align-items: center;
-    gap: 1.5rem;
-    width: 100%;
-    min-height: 100vh;
-    padding: 1rem;
-    box-sizing: border-box;
-}
-
-/* Box styles for .box1, .box2, and .box3 */
-.box1, .box2, .box3 {
-    flex: 1 1 calc(50% - 1rem); 
-    max-width: calc(50% - 1rem); 
-    height: 120px;
-    background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(0, 86, 179, 0.8)); 
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Hero Section */
+.hero {
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-    position: relative; 
-    overflow: hidden; 
+    padding: 2rem;
+    background: rgba(30, 60, 114, 0.8); /* Semi-transparent blue overlay for better text visibility */
+    color: white;
+    flex: 1;
 }
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(50, 80, 140, 0.9); /* Dark blue background for the button */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: rgba(70, 100, 160, 1); /* Slightly lighter blue on hover */
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Image Section */
+.hero-image,
+.hero-image2,
+.hero-image3 {
+    width: 100%; /* Make images responsive */
+    max-width: 400px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 1rem auto; /* Center images and add spacing */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-image:hover,
+.hero-image2:hover,
+.hero-image3:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+
+    .hero-image,
+    .hero-image2,
+    .hero-image3 {
+        max-width: 300px; /* Reduce image size for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem; /* Further adjust font size for mobile devices */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Further adjust font size for mobile devices */
+    }
+
+    .hero-image,
+    .hero-image2,
+    .hero-image3 {
+        max-width: 250px; /* Reduce image size for mobile devices */
+    }
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 1.5rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8); /* Light background */
+    color: #333;
+    border-radius: 10px;
+    margin: 2rem;
+}
+
+.feature {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95), rgba(50, 80, 140, 0.95));
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    color: #d1d1d1;
+    margin: 0.5rem 0;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+}
+
+.feature a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    padding: 1rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.feature a:hover {
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+/* Feature Box Styles */
+@media (max-width: 1024px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr); /* Two feature boxes per row for tablets */
+    }
+
+    .feature h3 {
+        font-size: 1.6rem; /* Adjust font size for tablets */
+    }
+
+    .feature p {
+        font-size: 1rem; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr); /* Two feature boxes per row for smaller tablets */
+    }
+
+    .feature h3 {
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
+    }
+
+    .feature p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .features {
+        grid-template-columns: repeat(1, 1fr); /* One feature box per row for mobile screens */
+    }
+
+    .feature h3 {
+        font-size: 1.2rem; /* Further adjust font size for mobile screens */
+    }
+
+    .feature p {
+        font-size: 0.8rem; /* Further adjust font size for mobile screens */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(30, 60, 114, 0.9); /* Blue background for the footer */
+    color: white;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
 
 /* Add decorative icons to boxes */
-.box1::before, .box2::before, .box3::before {
+.box3::before {
     content: '✨'; 
     font-size: 3rem;
     position: absolute;
@@ -52,13 +224,13 @@ html, body {
 }
 
 /* Hover effect for boxes */
-.box1:hover, .box2:hover, .box3:hover {
+.box3:hover {
     transform: translateY(-5px); 
     box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Text styles for claim, support, and wallets */
-.claim, .support, .wallets {
+.wallets {
     font-size: 1.2rem;
     font-weight: bold;
     color: #ffffff; 
@@ -66,7 +238,7 @@ html, body {
 }
 
 /* Aesthetic styles for <a> tags */
-.claim a, .support a, .wallets a {
+.wallets a {
     display: inline-block; 
     text-decoration: none;
     color: white; 
@@ -80,105 +252,180 @@ html, body {
 }
 
 /* Hover effect for links */
-.claim a:hover, .support a:hover, .wallets a:hover {
+.wallets a:hover {
     /* background: linear-gradient(135deg, #feb47b, #ff7e5f);  *//* Reverse gradient on hover */
     transform: translateY(-3px); 
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); 
 }
 
-/* Focus effect for accessibility */
-.claim a:focus, .support a:focus, .wallets a:focus {
-    outline: 2px solid #feb47b; 
-    outline-offset: 2px;
-}
 
-/* Responsive styles for mobile phones (max-width: 600px) */
-@media (max-width: 600px) {
-    .container {
-        flex-wrap: wrap; 
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .box1, .box2 {
-        flex: 1 1 calc(50% - 1rem);
-        max-width: calc(50% - 1rem); 
-        height: 100px;
-    }
-
-    .container2 {
-        flex-wrap: wrap; 
-        gap: 0.5rem; 
-    }
-
-    .box3 {
-        flex: 1 1 calc(50% - 0.5rem); 
-        max-width: calc(50% - 0.5rem); 
-        height: 100px; 
-    }
-
-    .claim, .support, .wallets {
-        font-size: 1rem;
-    }
-}
-
-/* Responsive styles for tablets/iPads (min-width: 601px and max-width: 1024px) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .container, .container2 {
-        flex-wrap: wrap; 
-        gap: 2rem; 
-        padding: 1.5rem; 
-    }
-
-    .box1, .box2, .box3 {
-        flex: 1 1 calc(25% - 2rem); 
-        max-width: calc(25% - 2rem); 
-        height: 120px; 
-    }
-
-    .claim, .support, .wallets {
-        font-size: 1.1rem; 
-    }
-}
 /* Form container styles */
 .form-container {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
-    width: 100%; 
-    height: 100vh;
-    padding: 1rem;
-    box-sizing: border-box; 
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Center the form vertically */
+    width: 100%; /* Full width */
+    height: 100vh; /* Full height of the viewport */
+    padding: 0; /* Remove padding for a seamless fit */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    overflow: hidden; /* Hide any overflowing content */
+    position: relative; /* For clipping the iframe */
 }
 
 /* Styles for the iframe */
 iframe {
-    width: 100%; 
-    max-width: 800px;
-    height: 100%; 
-    border: none; 
-    border-radius: 15px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); 
-    background-color: rgba(255, 255, 255, 0.9);}
+    width: 100%; /* Make the iframe take up the full width of its container */
+    height: 100%; /* Make the iframe take up the full height of its container */
+    border: none; /* Remove the default border */
+    border-radius: 15px; /* Add rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Subtle shadow for depth */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for better readability */
+    position: absolute; /* Position the iframe for clipping */
+    top: 0; /* Align the top of the iframe */
+    left: 0; /* Align the left of the iframe */
+    clip-path: inset(0 0 1.5em 0); /* Remove clipping to ensure the visible part fills the container */
+    transform: scale(1.1); /* Slightly scale the iframe to fill the container */
+    transform-origin: top left; /* Ensure scaling starts from the top-left corner */
+}
 
 /* Responsive styles for mobile phones (max-width: 600px) */
 @media (max-width: 600px) {
     .form-container {
-        padding: 0.5rem;
+        height: 100vh; /* Ensure the container takes up the full height of the viewport */
     }
 
     iframe {
-        height: 90%; 
+        clip-path: inset(0 0 2em 0); /* Ensure no clipping on mobile */
+        transform: scale(1.2); /* Adjust scaling for smaller screens */
     }
 }
 
 /* Responsive styles for tablets/iPads (min-width: 601px and max-width: 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     .form-container {
-        padding: 1rem; 
+        height: 100vh; /* Ensure the container takes up the full height of the viewport */
     }
 
     iframe {
-        height: 95%;
+        clip-path: inset(0 0 2em 0); /* Ensure no clipping on tablets */
+        transform: scale(1.1); /* Adjust scaling for tablets */
+    }
+}
+
+/* Search Bar */
+.search-container {
+    text-align: center;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+#walletSearch {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#walletSearch:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 2px 6px rgba(30, 60, 114, 0.3);
+}
+
+/* Swipeable Wallet List */
+/* Wallet List */
+.wallet-list {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 1rem; /* Space between wallets */
+    padding: 1rem;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 1rem auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Wallet Box Styling */
+.box3 {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background */
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Ensure the box covers the full width of its grid cell */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+.box3:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.box3 a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block; /* Ensure the link takes up the full width of the box */
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .wallet-list {
+        grid-template-columns: repeat(3, 1fr); /* Three wallets per row for tablets */
+    }
+
+    .box3 {
+        font-size: 1rem; /* Adjust font size for better readability */
+        padding: 1rem; /* Ensure proper spacing */
+    }
+    
+    .wallets {
+        font-size: 0.9rem; /* Adjust font size for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .wallet-list {
+        grid-template-columns: repeat(2, 1fr); /* Two wallets per row for smaller tablets */
+    }
+
+    .box3 {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        padding: 0.8rem; /* Reduce padding for better spacing */
+    }
+    .wallets {
+        font-size: 0.85rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .wallet-list {
+        grid-template-columns: repeat(2, 1fr); /* Two wallets per row for mobile screens */
+    }
+
+    .box3 {
+        font-size: 0.8rem; /* Further adjust font size for mobile screens */
+        padding: 0.7rem; /* Reduce padding for mobile */
+    }
+   
+    .wallets {
+        font-size: 0.8rem; /* Further adjust font size for mobile screens */
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #walletSearch {
+        width: 90%;
+    }
+
+    .box3 {
+        min-width: 120px; /* Adjust wallet size for smaller screens */
     }
 }
