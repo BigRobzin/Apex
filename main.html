@@ -2,30 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Airdrop farming">
-    <meta name="keywords" content="html,css and Javascript">
-    <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tindex.css">
-    <link rel="icon" href="" type="image/x-icon">
-    <title>Document</title>
+    <title>Wallet Selector</title>
 </head>
 <body>
-    <section class="container2">
-    <div class="box3"><p class="wallets"><a href="main2.html">WALLET</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">PHANTOM</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">META MASK</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">EXODUS </a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">ATOMIC WALLET</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">ELECTRON</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">BLOCK CHAIN</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">GUARDIA WALLET</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">COINOMI</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">MYCELIUM</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">EDGE WALLET</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">BLUE WALLET</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">TANGEM WALLET</a></p></div>
-    <div class="box3"><p class="wallets"><a href="main2.html">VAULT 12 GUARD</a></p></div>
-    </section> 
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="walletSearch" placeholder="Search for your wallet..." onkeyup="filterWallets()">
+    </div>
+
+    <!-- Swipeable Wallet List -->
+            <div class="wallet-list">
+            <div class="box3"><p class="wallets"><a href="main2.html">TRUST WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">PHANTOM</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">META MASK</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BINANCE.US</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">EXODUS</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ATOMIC WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ELECTRON</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BLOCK CHAIN</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">GUARDIA WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">COINOMI</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MYCELIUM</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">EDGE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BLUE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">TANGEM WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">VAULT 12 GUARD</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">KEEPKEY WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">XDEFI WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ONEKEY WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">PREMA WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">LIF3 WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">PAYPERLESS WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MDAO WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BYTEBANK WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">RICE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">OWNBIT</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">SEQUENCE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">NEON WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ABSOLUTE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ABRA WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">KYRPTOGO WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">QUBIC WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">COIN98 SUPER WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">PEAKDEFI</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">WALLET CONNECT</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">OKX WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">SAFE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">SAFEPAL</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">RAINBOW WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ARGENT</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">STRIKE X</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ZERION</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">UNISWAP WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BITGET WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BITSKI</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">iMTOKEN</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">TOKENPOCKET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ROBINHOOD WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BITFROST</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CRYPTO.COM</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">1inch WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ALPHA WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">KEYRING WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BINANCE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">INFINITY WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">FIREBLOCKS</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">OBVIOUS WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">UNSTOPPABLE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">LEDGERLIVE</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MEW WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">FRONTIER WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">OMNI WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ZENGO WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BITVERSE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">AMBIRE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MATH WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">LOBSTR WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BRIDGE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">INTERNET WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">NOW WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ABC WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">OPERA CRYPTO WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ARCULUS WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">VERSO WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">FNCY</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">OTTR FINANCE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">JADE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">HUDDIN</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CHAIN</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MODULAR WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">KELP</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">NUMIO WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CLING WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">OXALUS WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">KRIPTOMAT</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BLOCK WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">EVERSPACE</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ESSENTIALS</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CYPHERROCK CYSYNC</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CVL WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">STATUS</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CYPHER</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ANCRYPTO</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BURRITO</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CERTHIS</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">LIBERA</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">IMORTA</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">COPIOSA</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">TOKOIN WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">SABAYWALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">RIPIA</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BROEAM WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">THETA WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">DAWN WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">RABBY WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">LEAP COSMOS WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">UPBOND WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MONARCH WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">VALORA WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BCERTIN WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">COCA WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">VIVE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">PARASWAP WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">UVTOKEN WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MYWALLID</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">COINCIRCLE</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">SAHAL WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">APPOLO X</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">NITROGEN WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">LOOP RING</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BEE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">DOHMI WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MAGIC EDEN</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">TALK+</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">AT. WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ONTO </a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">D'CENT WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">PAPER</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BLOCTO</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">SECUX</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">KRAKEN WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">MOONPAY WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">FINTOKEN</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">NOVA WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">ZELCORE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">DREAM OS</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">KEYCHAIN WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BC VAULT</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">KEPLR WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">LINEN WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">BRAVE WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">PIER</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CORE</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">TORUS</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">FRAME</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">CROSSMINT</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">NABOX</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">HALO WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">GEM WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">GAMESTOP WALLET</a></p></div>
+            <div class="box3"><p class="wallets"><a href="main2.html">HAHA WALLET</a></p>
+            </div>
+
+    <script>
+        // Search Functionality
+        function filterWallets() {
+            const searchInput = document.getElementById("walletSearch").value.toUpperCase();
+            const walletList = document.querySelectorAll(".box3");
+
+            walletList.forEach(wallet => {
+                const walletText = wallet.textContent || wallet.innerText;
+                wallet.style.display = walletText.toUpperCase().includes(searchInput) ? "" : "none";
+            });
+        }
+    </script>
 </body>
 </html>
