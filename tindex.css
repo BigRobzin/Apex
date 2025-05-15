@@ -262,53 +262,65 @@ footer p {
 /* Form container styles */
 .form-container {
     display: flex;
-    justify-content: center; /* Center the form horizontally */
-    align-items: center; /* Center the form vertically */
-    width: 100%; /* Full width */
-    height: 100vh; /* Full height of the viewport */
-    padding: 0; /* Remove padding for a seamless fit */
-    box-sizing: border-box; /* Include padding in width/height calculations */
-    overflow: hidden; /* Hide any overflowing content */
-    position: relative; /* For clipping the iframe */
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 100vh; 
+    padding: 0; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+    position: relative; 
 }
 
-/* Styles for the iframe */
+/* Form Container */
+.form-container {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('52833.jpeg'); 
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Embedded Google Form */
 iframe {
-    width: 100%; /* Make the iframe take up the full width of its container */
-    height: 100%; /* Make the iframe take up the full height of its container */
-    border: none; /* Remove the default border */
-    border-radius: 15px; /* Add rounded corners for a modern look */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Subtle shadow for depth */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for better readability */
-    position: absolute; /* Position the iframe for clipping */
-    top: 0; /* Align the top of the iframe */
-    left: 0; /* Align the left of the iframe */
-    clip-path: inset(0 0 1.5em 0); /* Remove clipping to ensure the visible part fills the container */
-    transform: scale(1.1); /* Slightly scale the iframe to fill the container */
-    transform-origin: top left; /* Ensure scaling starts from the top-left corner */
-}
+    width: 100%;
+    height: 90%; /* Make the iframe fill the container */
+    border: none; /* Remove iframe border */
+    border-radius: 10px; /* Optional: Match the container's rounded corners */
+    }
 
-/* Responsive styles for mobile phones (max-width: 600px) */
-@media (max-width: 600px) {
+/* Responsive Styles */
+@media (max-width: 1024px) {
     .form-container {
-        height: 100vh; /* Ensure the container takes up the full height of the viewport */
+        border-radius: 0; /* Remove rounded corners for tablets */
+        box-shadow: none; /* Simplify the design for tablets */
     }
 
     iframe {
-        clip-path: inset(0 0 2em 0); /* Ensure no clipping on mobile */
-        transform: scale(1.2); /* Adjust scaling for smaller screens */
+        border-radius: 0; /* Match the container's style */
     }
 }
 
-/* Responsive styles for tablets/iPads (min-width: 601px and max-width: 1024px) */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (max-width: 768px) {
     .form-container {
-        height: 100vh; /* Ensure the container takes up the full height of the viewport */
+        background: rgba(255, 255, 255, 0.95); /* Slightly more opaque background for smaller screens */
     }
 
     iframe {
-        clip-path: inset(0 0 2em 0); /* Ensure no clipping on tablets */
-        transform: scale(1.1); /* Adjust scaling for tablets */
+        height: 100%; /* Ensure the iframe still fills the screen */
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        background: rgba(255, 255, 255, 1); /* Fully opaque background for mobile screens */
+    }
+
+    iframe {
+        height: 100%; /* Ensure the iframe still fills the screen */
     }
 }
 
